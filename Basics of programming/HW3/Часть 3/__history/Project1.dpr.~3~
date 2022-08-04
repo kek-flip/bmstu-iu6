@@ -1,0 +1,108 @@
+program Project1;
+{$APPTYPE CONSOLE}
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+type faculty = object
+private
+  name : string;
+  teachers, students : integer;
+public
+  procedure Init(n : string; t, s : integer);
+  procedure Info;
+  function StudPerTeach : real;
+
+  function getStudents : integer;
+  function getTeachers : integer;
+end;
+
+procedure faculty.Init(n: string; t: Integer; s: Integer);
+begin
+  name := n;
+  teachers := t;
+  students := s;
+end;
+
+procedure faculty.Info;
+begin
+  writeln('Факультет ', name);
+  writeln('Кол-во преподавателей: ', teachers);
+  writeln('Кол-во студентов ', students);
+end;
+
+function faculty.StudPerTeach: real;
+begin
+  StudPerTeach := students / teachers;
+end;
+
+function faculty.getStudents: Integer;
+begin
+  getStudents := students;
+end;
+
+function faculty.getTeachers: Integer;
+begin
+  getTeachers := teachers;
+end;
+
+
+type university = object
+  fac : array of faculty;
+  procedure Init(arr : array of faculty; n : integer);
+  procedure Info;
+  function biggestFac : faculty;
+  function smallestFac : faculty;
+end;
+
+procedure university.Init(arr : array of faculty; n: Integer);
+var i : integer;
+begin
+  setlength(fac, n);
+  for i := 0 to n - 1 do
+    fac[i + 1] := arr[i];
+end;
+
+procedure university.Info;
+var i : integer;
+begin
+  writeln('Информация о факультетах университета: ');
+  for i := 0 to high(fac) - 1 do
+  begin
+    fac[i].info;
+    writeln('===================================');
+  end;
+end;
+
+function university.biggestFac: faculty;
+var i : integer;
+    max : faculty;
+begin
+  max := fac[0];
+  for i := 0 to high(fac) - 1 do
+  begin
+    if (max.getStudents < fac[i].getStudents) then
+      max := fac[i];
+  end;
+  biggestFac := max;
+end;
+
+function university.smallestFac : faculty;
+var i : integer;
+    minfaculty;
+begin
+  min :=c[0];
+  for i := 0 to high(fac) - 1 do
+  begin
+    if (max.getStudents < fac[i].getStudents) then
+      max := fac[i];
+  end;
+  biggestFac := max;
+end;
+
+
+
+begin
+
+end.

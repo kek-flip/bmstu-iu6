@@ -1,0 +1,52 @@
+unit barGraph;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.ExtCtrls;
+
+type
+  TBarGraphForm = class(TForm)
+    BarGraph: TImage;
+  private
+
+  public
+    procedure Draw(RoomPerCat, cats : TStringList);
+  end;
+
+var
+  barGraphForm: TbarGraphForm;
+
+implementation
+
+{$R *.dfm}
+
+procedure TBarGraphForm.Draw(RoomPerCat: TStringList; cats: TStringList);
+var max, x, y1, y2, h, i, n : integer;
+    m :real;
+begin
+  max := -1;
+  n := cats.Count;
+  for i := 0 to n - 1 do
+    if (StrToInt(RoomPerCat.Values[cats[i]]) > max) then
+      max := StrToInt(RoomPerCat.Values[cats[i]]);
+  h:= round(BarGraph.Width/(2 * n + 1));
+  m:= BarGraph.Height / max;
+  x:= h;
+
+  BarGraph.Canvas.Brush.Color := clBlue;
+  y1 := BarGraph.Height - 10;
+  BarGraph.Canvas.Font.Color := clBlack;
+  for i := 0 to n - 1 do
+  begin
+    y2 := y1 - round(StrToInt(RoomPerCat.Values[cats[i]]) * m);
+    BarGraph.Canvas.Rectangle(x, y1, x+h, y2);
+    BarGraph.Canvas.Brush.Style := bsClear;
+    BarGraph.Canvas.TextOut(x, y1 + 2, cats[i]);
+    BarGraph.Canvas.Brush.Style := bsSolid;
+    x := x + 2 * h;
+  end;
+end;
+
+end.

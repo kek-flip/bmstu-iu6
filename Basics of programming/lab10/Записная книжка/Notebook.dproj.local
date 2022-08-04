@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.806,C:\Users\normp\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\normp\Documents\Embarcadero\Studio\Projects\N_unit.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.943,=C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.990,C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Unit2.pas=C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Записная книжка\Add_unit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.147,C:\Users\normp\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Notebook.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.990,C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Unit2.dfm=C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Записная книжка\Add_unit.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.917,C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Записная книжка\N_unit.pas=C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Записная книжка\Main_unit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.167,C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Notebook.dproj=C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Записная книжка\Notebook.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.301,C:\Users\normp\Documents\Embarcadero\Studio\Projects\N_unit.pas=C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Записная книжка\N_unit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.511,=C:\Users\normp\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.806,C:\Users\normp\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\normp\Documents\Embarcadero\Studio\Projects\N_unit.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.917,C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Unit3.dfm=C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Записная книжка\Search_unit.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.301,C:\Users\normp\Documents\Embarcadero\Studio\Projects\N_unit.dfm=C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Записная книжка\N_unit.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.917,C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Записная книжка\N_unit.dfm=C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Записная книжка\Main_unit.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.229,=C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Unit3.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.917,C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Unit3.pas=C:\Users\normp\Documents\ОП\Лабы ОП\Лаба 10\Записная книжка\Search_unit.pas</Transaction>
+  </Transactions>
+	<ProjectSortOrder AutoSort="0" SortType="0">
+    <File Path="Add_unit.pas"/>
+    <File Path="Add_unit.dfm"/>
+    <File Path="Main_unit.pas"/>
+    <File Path="Main_unit.dfm"/>
+    <File Path="Search_unit.pas"/>
+    <File Path="Search_unit.dfm"/>
+  </ProjectSortOrder>
+</BorlandProject>

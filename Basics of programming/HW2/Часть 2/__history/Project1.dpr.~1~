@@ -1,0 +1,39 @@
+program Project1;
+
+{$APPTYPE CONSOLE}
+{$R *.res}
+uses
+  System.SysUtils;
+
+var i, j, n, sum : integer;
+    a : array [1..10, 1..10] of integer;
+
+procedure sumOfRow (var x; i, n : integer; var s : integer);
+var a : array [1..110] of integer absolute x;
+begin
+  for i := 1 to n do
+    s := s + a[(i - 1) * n + j];
+end;
+
+begin
+  write('¬ведите размер матрицы: '); readln(n);
+  writeln('¬ведите матрицу: ');
+  for i := 1 to n do
+  begin
+    for j := 1 to n do
+      read(a[i, j]);
+    readln;
+  end;
+
+  for i := 1 to n do
+  begin
+    sum := 0;
+    sumOfRow(a, i, n, sum);
+    for j := i to n do
+    begin
+
+    end;
+  end;
+
+
+end.

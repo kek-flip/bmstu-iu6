@@ -1,0 +1,16 @@
+program DataBase;
+
+uses
+  Vcl.Forms,
+  MainSource in 'MainSource.pas' {MainForm},
+  NewSource in 'NewSource.pas' {NewForm};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TMainForm, MainForm);
+  Application.CreateForm(TNewForm, NewForm);
+  Application.Run;
+end.

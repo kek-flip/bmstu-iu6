@@ -1,0 +1,103 @@
+unit Unit1;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.VirtualImage, Vcl.ExtCtrls,
+  Vcl.StdCtrls, Vcl.ToolWin, Vcl.ActnMan, Vcl.ActnCtrls, Vcl.ActnMenus,
+  System.Actions, Vcl.ActnList, Vcl.PlatformDefaultStyleActnCtrls, Vcl.StdActns,
+  Vcl.Grids;
+
+type
+  room = record
+    number, bedCount : integer;
+    price : real;
+    category : string[20];
+  end;
+
+  TMain = class(TForm)
+    ActionMainMenuBar: TActionMainMenuBar;
+    ActionManager: TActionManager;
+    New: TAction;
+    Save: TAction;
+    FileOpen: TFileOpen;
+    FileSaveAs: TFileSaveAs;
+    table: TStringGrid;
+    ScrollBar: TScrollBar;
+    procedure SaveExecute(Sender: TObject);
+    procedure FileOpenAccept(Sender: TObject);
+    procedure NewExecute(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
+    procedure FileSaveAsBeforeExecute(Sender: TObject);
+  private
+    database : file of room;
+  public
+    { Public declarations }
+  end;
+
+var
+  Main: TMain;
+
+implementation
+
+{$R *.dfm}
+
+procedure TMain.FileOpenAccept(Sender: TObject);
+var i : integer; buf : room;
+begin
+  AssignFile(database, FileOpen.Dialog.FileName);
+  Reset(database);
+
+  i := 1;
+  while (not EOF(database)) do
+  begin
+    read(database, buf);
+    table.RowCount := table.RowCount + 1;
+
+    table.Cells[0, i] := IntToStr(buf.number);
+    table.Cells[1, i] := buf.category;
+    table.Cells[2, i] := IntToStr(buf.bedCount);
+    table.Cells[3, i] := FloatToStr(buf.price);
+
+    i := i + 1;
+  end;
+end;
+
+procedure TMain.FileSaveAsBeforeExecute(Sender: TObject);
+begin
+  FileSaveAs.Dialog.FileName := FileOpen.Dialog.FileName;
+end;
+
+procedure TMain.FormCreate(Sender: TObject);
+begin
+  table.Cells[0, 0] := 'Номер';
+  table.Cells[1, 0] := 'Категория';
+  table.Cells[2, 0] := 'Кол-во мест';
+  table.Cells[3, 0] := 'Цена';
+  table.RowCount := 1;
+end;
+
+procedure TMain.NewExecute(Sender: TObject);
+begin
+//
+end;
+
+procedure TMain.SaveExecute(Sender: TObject);
+var i : integer; buf : room;
+begin
+  rewrite(database);
+
+  for i := 1 to table.RowCount - 1 do
+  begin
+    buf.number := StrToInt(table.Cells[0, i]);
+    buf.category := table.Cells[1, i];
+    buf.bedCount := StrToInt(table.Cells[2, i]);
+    buf.price := StrToFloat(table.Cells[3, i]);
+
+    write(database, buf);
+  end;
+end;
+
+
+end.

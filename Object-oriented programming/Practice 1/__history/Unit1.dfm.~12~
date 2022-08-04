@@ -1,0 +1,122 @@
+object Main: TMain
+  Left = 0
+  Top = 0
+  Caption = #1041#1072#1079#1072' '#1076#1072#1085#1085#1099#1093
+  ClientHeight = 452
+  ClientWidth = 841
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object ActionMainMenuBar: TActionMainMenuBar
+    Left = 0
+    Top = 0
+    Width = 841
+    Height = 25
+    UseSystemFont = False
+    ActionManager = ActionManager
+    Caption = 'ActionMainMenuBar'
+    Color = clMenuBar
+    ColorMap.DisabledFontColor = 7171437
+    ColorMap.HighlightColor = clWhite
+    ColorMap.BtnSelectedFont = clBlack
+    ColorMap.UnusedColor = clWhite
+    Font.Charset = DEFAULT_CHARSET
+    Font.Color = clBlack
+    Font.Height = -12
+    Font.Name = 'Segoe UI'
+    Font.Style = []
+    Spacing = 0
+  end
+  object table: TStringGrid
+    Left = 8
+    Top = 31
+    Width = 440
+    Height = 413
+    DefaultColWidth = 110
+    FixedCols = 0
+    GridLineWidth = 3
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goEditing, goFixedRowDefAlign]
+    ScrollBars = ssNone
+    TabOrder = 1
+  end
+  object ScrollBar1: TScrollBar
+    Left = 454
+    Top = 31
+    Width = 17
+    Height = 413
+    Kind = sbVertical
+    PageSize = 0
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 488
+    Top = 31
+    Width = 75
+    Height = 25
+    Caption = 'Button1'
+    TabOrder = 3
+    OnClick = Button1Click
+  end
+  object ActionManager: TActionManager
+    ActionBars = <
+      item
+        Items = <
+          item
+            Items = <
+              item
+                Action = New
+              end
+              item
+                Action = FileOpen
+                ImageIndex = 7
+                ShortCut = 16463
+              end
+              item
+                Action = Save
+                ShortCut = 16467
+              end
+              item
+                Action = FileSaveAs
+                ImageIndex = 30
+              end>
+            Caption = #1060#1072#1081#1083
+          end>
+        ActionBar = ActionMainMenuBar
+      end>
+    Left = 808
+    StyleName = 'Platform Default'
+    object New: TAction
+      Category = #1060#1072#1081#1083
+      Caption = #1053#1086#1074#1099#1081'...'
+      OnExecute = NewExecute
+    end
+    object FileOpen: TFileOpen
+      Category = #1060#1072#1081#1083
+      Caption = #1054#1090#1082#1088#1099#1090#1100'...'
+      Hint = 'Open|Opens an existing file'
+      ImageIndex = 7
+      ShortCut = 16463
+      OnAccept = FileOpenAccept
+    end
+    object Save: TAction
+      Category = #1060#1072#1081#1083
+      Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100
+      ShortCut = 16467
+      OnExecute = SaveExecute
+    end
+    object FileSaveAs: TFileSaveAs
+      Category = #1060#1072#1081#1083
+      Caption = #1057#1086#1093#1088#1072#1085#1080#1090#1100' '#1082#1072#1082'...'
+      Hint = 'Save As|Saves the active file with a new name'
+      ImageIndex = 30
+      OnAccept = FileSaveAsAccept
+    end
+  end
+end

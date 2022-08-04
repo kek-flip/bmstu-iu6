@@ -1,0 +1,56 @@
+program Project1;
+{$APPTYPE CONSOLE}
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+type resistor = class
+  protected resistance : real;
+  procedure Init(r : real);
+  procedure Info;
+  function Amperage(u : real) : real;
+end;
+
+procedure resistor.Init(r: Real);
+begin
+  resistance := r;
+end;
+
+procedure resistor.Info;
+begin
+  writeln('Сопротивление резистора равно ', resistance);
+end;
+
+function resistor.Amperage(u: Real): Real;
+begin
+  Amperage := u / resistance;
+end;
+
+type rheostat = class(resistor)
+  private part : real;
+  procedure Init(r, p : real);
+  procedure Info;
+  function Amperage(u : real) : real;
+end;
+
+procedure rheostat.Init(r, p : real);
+begin
+  resistance := r;
+  part := p;
+end;
+
+procedure rheostat.Info;
+begin
+  writeln('Сопротивление реостата равно ', resistance);
+  writeln('Доля настроенного сопротивления ', part * 100 : 2 : 2, '%');
+end;
+
+function rheostat.Amperage(u: Real): Real;
+begin
+  Amperage := inherited Amperage(u) / part;
+end;
+
+begin
+
+end.

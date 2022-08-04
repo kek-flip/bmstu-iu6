@@ -1,0 +1,128 @@
+unit stack;
+
+interface
+
+type
+  elP = ^el;
+  el = record
+    valI : integer;
+    valC : char;
+    t : char;
+    p : elP;
+end;
+
+type TStack = class
+private
+  head : elP;
+public
+  constructor create(c : char); overload;
+  constructor create(i : integer); overload;
+  procedure push(c : char); overload;
+  procedure push(i : integer); overload;
+  procedure pop;
+  procedure print;
+  destructor delete; virtual;
+end;
+
+type TSortStack = class(TStack)
+public
+  constructor create(c : char); overload;
+  constructor create(i : integer); overload;
+  procedure sort;
+  destructor delete; virtual;
+end;
+
+implementation
+
+constructor TStack.create(c : char);
+begin
+  new(head);
+  head^.valC := c;
+  head^.t := 'C';
+  head^.p := nil;
+end;
+
+constructor TStack.create(i : integer);
+begin
+  new(head);
+  head^.valI := i;
+  head^.t := 'I';
+  head^.p := nil;
+end;
+
+procedure TStack.push(c : char);
+var buf : elP;
+begin
+  new(buf);
+  buf^.valC := c;
+  buf^.t := 'C';
+  buf^.p := head;
+  head := buf;
+end;
+
+procedure TStack.push(i : integer);
+var buf : elP;
+begin
+  new(buf);
+  buf^.valI := i;
+  buf^.t := 'I';
+  buf^.p := head;
+  head := buf;
+end;
+
+procedure TStack.pop;
+var buf : elP;
+begin
+  buf := head^.p;
+  dispose(head);
+  head := buf;
+end;
+
+procedure TStack.print;
+var i : elP;
+begin
+  i := head;
+  while (i <> nil) do
+  begin
+    if (i^.t = 'C') then
+      write(i^.valC, ' ');
+
+    if (i^.t = 'I') then
+      write(i^.valI, ' ');
+
+    i := i^.p;
+  end;
+  writeln;
+end;
+
+destructor TStack.delete;
+begin
+  while (head <> nil) do
+  begin
+    pop;
+    print;
+  end;
+end;
+
+constructor TSortStack.create(c: Char);
+begin
+  inherited create(c);
+end;
+
+
+constructor TSortStack.create(i: integer);
+begin
+  inherited create(i);
+end;
+
+procedure TSortStack.sort;
+begin
+
+end;
+
+destructor TSortStack.delete;
+begin
+  inherited delete;
+end;
+
+end.

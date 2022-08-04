@@ -1,0 +1,48 @@
+program Project1;
+{$APPTYPE CONSOLE}
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+
+function costyl(k : integer) : integer;
+var n, f1, f2 : integer;
+begin
+  n := 1;
+  f1 := 1;
+  f2 := 1;
+  while (f2 <= k) do
+    begin
+      f2 := f1 + f2;
+      f1 := f2 - f1;
+      n := n + 1;
+    end;
+  costyl := n;
+end;
+
+var k, f1, f2, n, i : integer;
+
+begin
+  begin
+  write('Введите число k: '); readln(k);
+  f1 := 1;
+  f2 := 1;
+  n := costyl(k);
+  if (k < 1) then
+    writeln('Ошибка: нечетных чисел последовательности Фибоначчи меньше или равных k не существует')
+  else
+    begin
+      writeln('Нечетные числа последовательности Фибоначчи меньше или равные k:');
+      writeln('F1 = ', f1);
+      for i := 2 to n do
+      begin
+        if (f2 mod 2 <> 0) then
+          writeln('F', i, ' = ', f2);
+        f2 := f1 + f2;
+        f1 := f2 - f1;
+      end;
+    end;
+  end;
+  readln;
+end.

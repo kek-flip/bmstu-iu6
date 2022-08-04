@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.695,C:\Users\normp\Documents\Embarcadero\Studio\Projects\Main.pas=C:\Users\normp\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.279,=C:\Users\normp\Documents\ОП\2 семестр\ДЗ1\Часть 1\Figures.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.360,=C:\Users\normp\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.436,C:\Users\normp\Documents\Embarcadero\Studio\Projects\Figures.pas=C:\Users\normp\Documents\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.327,C:\Users\normp\Documents\ОП\2 семестр\ДЗ1\Часть 1\Main.dfm=C:\Users\normp\Documents\Embarcadero\Studio\Projects\Main.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.970,C:\Users\normp\Documents\ОП\2 семестр\ДЗ1\Часть 1\Project1.dproj=C:\Users\normp\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.695,C:\Users\normp\Documents\Embarcadero\Studio\Projects\Main.dfm=C:\Users\normp\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.327,C:\Users\normp\Documents\ОП\2 семестр\ДЗ1\Часть 1\Main.pas=C:\Users\normp\Documents\Embarcadero\Studio\Projects\Main.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.629,=C:\Users\normp\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

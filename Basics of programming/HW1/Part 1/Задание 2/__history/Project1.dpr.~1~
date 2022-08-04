@@ -1,0 +1,27 @@
+program Project1;
+
+{$APPTYPE CONSOLE}
+
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+var x : array [1..5] of real; y1, y2, y : real; i : byte;
+
+begin
+  write('Введите значения x = ');
+  for i := 1 to 5 do read(x[i]);
+  for i := 1 to 5 do
+  begin
+    y1 := (exp(x[i]) - exp(-x[i])) / 2;
+    y2 := (exp(x[i]) + exp(-x[i])) / 2;
+    y := sqr(y2) - sqr(y1);
+    writeln('x = ', x[i]);
+    writeln('sh x = ', y1:20:16);
+    writeln('ch x = ', y2:20:16);
+    writeln('(ch x)^2 - (sh x)^2 = ', y:20:16);
+    writeln('==========================');
+  end;
+  readln;
+end.

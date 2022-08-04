@@ -1,0 +1,35 @@
+program Project1;
+{$APPTYPE CONSOLE}
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+type faculty = object
+private
+  name : string;
+  teachers, students : integer;
+public
+  procedure Init(n : string; t, s : integer);
+  procedure Info;
+
+end;
+
+procedure faculty.Init(n: string; t: Integer; s: Integer);
+begin
+  name := n;
+  teachers := t;
+  students := s;
+end;
+
+procedure faculty.Info;
+begin
+  writeln('Факультет ', name);
+  writeln('Кол-во преподавателей: ', teachers);
+  writeln('Кол-во студентов ', students);
+end;
+
+
+begin
+
+end.

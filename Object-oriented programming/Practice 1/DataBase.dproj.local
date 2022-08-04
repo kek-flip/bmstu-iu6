@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.003,=C:\Users\normp\Documents\Programming\2 семестр\Практика 1\Unit1.pas</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.022,C:\Users\normp\Documents\Programming\2 семестр\Практика 1\barGraph.dfm=C:\Users\normp\Documents\Programming\2 семестр\Практика 1\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.022,C:\Users\normp\Documents\Programming\2 семестр\Практика 1\barGraph.pas=C:\Users\normp\Documents\Programming\2 семестр\Практика 1\Unit1.pas</Transaction>
+  </Transactions>
+</BorlandProject>

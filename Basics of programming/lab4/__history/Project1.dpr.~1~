@@ -1,0 +1,19 @@
+program Project1;
+{$APPTYPE CONSOLE}
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+var b : array [1..40] of integer;
+var max, i, n : integer;
+
+begin
+  write('¬ведите кол-во элементов: '); readln(n);
+  writeln('¬ведите элементы массива: ');
+  for i := 1 to n do
+    readln(b[i]);
+  max := b[1] * b[n];
+  for i := 1 to n do
+
+end.

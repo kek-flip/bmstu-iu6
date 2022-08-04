@@ -1,0 +1,55 @@
+program Project1;
+{$APPTYPE CONSOLE}
+{$R *.res}
+
+uses
+  System.SysUtils;
+
+type faculty = object
+private
+  name : string;
+  teachers, students : integer;
+public
+  procedure Init(n : string; t, s : integer);
+  procedure Info;
+  function StudPerTeach : real;
+
+  function getStudents : integer;
+  function getTeachers : integer;
+end;
+
+procedure faculty.Init(n: string; t: Integer; s: Integer);
+begin
+  name := n;
+  teachers := t;
+  students := s;
+end;
+
+procedure faculty.Info;
+begin
+  writeln('Факультет ', name);
+  writeln('Кол-во преподавателей: ', teachers);
+  writeln('Кол-во студентов ', students);
+end;
+
+function faculty.StudPerTeach: real;
+begin
+  StudPerTeach := students / teachers;
+end;
+
+function faculty.getStudents: Integer;
+begin
+  getStudents := students;
+end;
+
+function faculty.getTeachers: Integer;
+begin
+  getTeachers := teachers;
+end;
+
+
+
+
+begin
+
+end.

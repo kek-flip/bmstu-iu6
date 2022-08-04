@@ -1,0 +1,39 @@
+program Project1;
+
+{$APPTYPE CONSOLE}
+{$R *.res}
+uses
+  System.SysUtils;
+
+var a : array [1..10, 1..10] of integer;
+    i, j, k, n, sum, sum1 : integer;
+
+begin
+  write('Введите размер матрицы: '); readln(n);
+  writeln('Введите матрицу:');
+  for i := 1 to n do begin
+    for j := 1 to n do
+      read(a[i, j]);
+    readln;
+  end;
+
+  for i := 1 to n do
+  begin
+    sum := 0;
+    for j := 1 to n do
+      sum :=  sum + a[i, j];
+
+    write('Строки ', i, ' ');
+    for j := i to n do
+    begin
+      sum1 := 0;
+      for k := 1 to n do
+        sum1 :=  sum1 + a[j, k];
+      if (sum = sum1) then
+        write(j, ' ');
+    end;
+
+    writeln('имеют сумму ', sum);
+  end;
+  readln;
+end.

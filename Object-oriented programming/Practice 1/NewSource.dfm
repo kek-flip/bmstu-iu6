@@ -1,0 +1,75 @@
+object NewForm: TNewForm
+  Left = 0
+  Top = 0
+  Caption = #1057#1086#1079#1076#1072#1090#1100' '#1085#1086#1074#1099#1081' '#1092#1072#1081#1083
+  ClientHeight = 174
+  ClientWidth = 350
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object NameLabel: TLabel
+    Left = 8
+    Top = 8
+    Width = 19
+    Height = 13
+    Caption = #1048#1084#1103
+  end
+  object PathLabel: TLabel
+    Left = 8
+    Top = 80
+    Width = 73
+    Height = 13
+    Caption = #1056#1072#1089#1087#1086#1083#1086#1078#1077#1085#1080#1077
+  end
+  object NameEdit: TEdit
+    Left = 8
+    Top = 27
+    Width = 334
+    Height = 21
+    TabOrder = 0
+    Text = 'database'
+    OnChange = NameEditChange
+  end
+  object PathEdit: TEdit
+    Left = 8
+    Top = 99
+    Width = 301
+    Height = 21
+    TabOrder = 1
+    Text = 'C:\'
+  end
+  object PathButton: TButton
+    Left = 315
+    Top = 97
+    Width = 27
+    Height = 25
+    Caption = '...'
+    TabOrder = 2
+    OnClick = PathButtonClick
+  end
+  object CreateButton: TButton
+    Left = 267
+    Top = 139
+    Width = 75
+    Height = 25
+    Caption = #1057#1086#1079#1076#1072#1090#1100
+    TabOrder = 3
+    OnClick = CreateButtonClick
+  end
+  object CancelButton: TButton
+    Left = 186
+    Top = 139
+    Width = 75
+    Height = 25
+    Caption = #1054#1090#1084#1077#1085#1072
+    TabOrder = 4
+    OnClick = CancelButtonClick
+  end
+end

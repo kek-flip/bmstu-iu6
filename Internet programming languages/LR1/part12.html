@@ -3,56 +3,81 @@
 
 <head>
     <meta charset="utf-8">
+    <style>
+        #code {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: smaller;
+        }
+        h3 {
+            color: darkgreen;
+            text-decoration: underline;
+        }
+        #first_p {
+            border: 1px solid black;
+        }
+        #second_p {
+            border: 1px solid black;
+            background-color: blue;
+        }
+        #third_p {
+            border: 1px solid black;
+            background-color: red;
+        }
+    </style>
     <title>Поиск в ширину</title>
 </head>
 
 <body>
     <h3>Алгоритм поиска в ширину(BFS)</h3>
-    <p>Пусть <strong>задан</strong> граф <var>G</var> = (<var>V</var>, <var>E</var>), где <var>V</var> - кол-во вершин, 
+    <p id="first_p">Пусть <strong>задан</strong> 
+    <a href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B0%D1%84_(%D0%BC%D0%B0%D1%82%D0%B5%D0%BC%D0%B0%D1%82%D0%B8%D0%BA%D0%B0)">
+    граф</a> 
+    <var>G</var> = (<var>V</var>, <var>E</var>), где <var>V</var> - кол-во вершин, 
     <var>E</var> -
     кол-во ребер графа, и дана исходная <strong>вершина</strong> s</p>
     
-    <p>Алгоритм поиска в ширину обходит все ребра графа <var>G</var> для "открытия" всех вершин, достижимых из s,
+    <p id="second_p">Алгоритм поиска в ширину обходит все ребра графа <var>G</var> для "открытия" всех вершин, достижимых из s,
     с целью вычисления расстояния от заданной вершины до других вершин графа и построения дерева предкоков.</p>
-    <p>Алгоритм имеет название поиск в ширину, потому что на каждом этапе обхода рассматривает сначала все вершины, 
+
+    <p id="third_p">Алгоритм имеет название поиск в ширину, потому что на каждом этапе обхода рассматривает сначала все вершины, 
     связанные с рассматриваемой, и лишь потом переходит к рассмотрению другой вершины.<br>
     Условно говоря, если представить множетсво открытых вершин как дерево, то оно сначала будет увеличиваться в <strong>ширину</strong>,
     а когда расширение закончится, будет увеличиваться в длину(глубину).</p>
+
     <p>Для своей работы алгоритм <strong>раскрашивает</strong> врешины в черный(уже рассмотренные) и белый(еще не рассмотренные).
     Также можно ввести понятие серых вершин: вершины, которые уже были посещены алгоритмом, но не до конца обработы им, тогда эти
     серые вершины будут обозначать границу между рассмотренными и нерассмотренными вершинами.
     </p>
-    <p>Ниже представлен код реализации BFS на C++. В данной реализиции мы храним граф в виде <strong>списка смежности</strong>:
+    <p>Ниже представлен код реализации BFS на <a href="https://isocpp.org/">C++</a>. В данной реализиции мы храним граф в виде <strong>списка смежности</strong>:
     массива списков, где в <var>i-ом</var> списке хранятся вершины, которые связаны с <var>i-ой</var> вершиной.</p>
-    <p>Реализация:<br>
-    <code>
-        vector&lt;vector&lt;int&gt;g(1010); // <strong>Список</strong> смежности<br>
-        vector&lt;bool&gt; used(1010); //Массив, посещенных вершин<br>
-        vector&lt;int&gt; d(1010); //Массив расстояний<br>
-        vector&lt;int&gt; p(1010); //Массив предков<br>
-             
-        queue&lt;int&gt; q; //Очередь рассматриваемых вершин<br>
-             
-        void bfs(int s) {<br>
-            d[s] = 0;<br>
-            p[s] = -1;<br>
-            used[s] = true;<br>
-            q.push(s);<br>
-            while (!q.empty()) {<br>
-                int curr = q.front();<br>
-                q.pop();<br>
-                for (int i = 0; i &lt; g[curr].size(); i++) {<br>
-                    if(!used[g[curr][i]]) {<br>
-                        d[g[curr][i]] = d[curr] + 1;<br>
-                        p[g[curr][i]] = curr;<br>
-                        q.push(g[curr][i]);<br>
-                        used[g[curr][i]] = true;<br>
-                    }<br>
-                }<br>
-            }<br>
-        }<br>
-    </code>
-    </p>
+    <p>Реализация:</p>
+    <pre id="code">
+vector&lt;vector&lt;int&gt;&gt; g(1010);  // Список смежности
+vector&lt;bool&gt; used(1010);      // Массив, посещенных вершин
+vector&lt;int&gt; d(1010);          // Массив расстояний
+vector&lt;int&gt; p(1010);          // Массив предков
+
+queue&lt;int&gt; q;                 // Очередь рассматриваемых вершин
+
+void bfs(int s) {
+    d[s] = 0;
+    p[s] = -1;
+    used[s] = true;
+    q.push(s);
+    while (!q.empty()) {
+        int curr = q.front();
+        q.pop();
+        for (int i = 0; i &lt; g[curr].size(); i++) {
+            if (!used[g[curr][i]]) {
+                d[g[curr][i]] = d[curr] + 1;
+                p[g[curr][i]] = curr;
+                q.push(g[curr][i]);
+                used[g[curr][i]] = true;
+            }
+        }
+    }
+}
+    </pre>
 </body>
 
 </html>

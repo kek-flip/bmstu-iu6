@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICS6 Bootstrap</title>
+    <link href="http://e-learning.bmstu.ru/iu6/pluginfile.php/754
+6/mod_folder/content/0/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html {
+            position: relative;
+            min-height: 100%;
+        }
+
+        body {
+            margin-bottom: 40px;
+        }
+
+        main {
+            margin-top: 15px;
+        }
+
+        footer {
+            height: 40px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .my-primary {
+            background-color: #bbc572;
+            color: white;
+        }
+
+        th, td {
+            text-align: center;
+        }
+
+        main > div {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark my-primary">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main class="container">
+        <div class="row">
+            <div class="col-4">
+                <img src=" http://e-learning.bmstu.ru/iu6/pluginfile.php/7546/
+mod_folder/content/0/avatar.jpg" alt="avatar" width="150" height="150">
+            </div>
+            <div class="col-8">
+                <p>
+                    Для своей работы алгоритм <strong>раскрашивает</strong> врешины в черный(уже рассмотренные) и
+                    белый(еще не рассмотренные).
+                    Также можно ввести понятие серых вершин: вершины, которые уже были посещены алгоритмом, но не до
+                    конца обработы им, тогда эти
+                    серые вершины будут обозначать границу между рассмотренными и нерассмотренными вершинами.
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-4">
+                <form>
+                    <div class="form-group row">
+                        <label for="fname" class="col-sm-3 col-form-label">Имя</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="fname" id="fname">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="sname" class="col-sm-3 col-form-label">Фамилия</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="sname" id="sname">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <legend class="col-form-label col-sm-3">Пол</legend>
+                        <div class="col-sm-9">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gender" id="mgender" value="м">
+                                <label class="form-check-label" for="mgender">
+                                    М
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="gender" id="fgender" value="ж">
+                                <label class="form-check-label" for="fgender">
+                                    Ж
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="birthday" class="col-sm-5 col-form-label">Дата рождения</label>
+                        <div class="col-sm-7">
+                            <input type="text" class="form-control" name="birthday" id="birthday">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="fpassword" class="col-sm-3 col-form-label">Пароль</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="fpassword" id="fpassword">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="spassword" class="col-sm-3 col-form-label">Повторите пароль</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control" name="spassword" id="spassword">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="col-8">
+                <table class="table table-bordered">
+                    <tr>
+                        <th rowspan="8">СР</th>
+                        <th>Время</th>
+                        <th>ЧС</th>
+                        <th>ЗН</th>
+                    </tr>
+                    <tr>
+                        <td>08.30-10.05</td>
+                        <td colspan="2">Электротехника</td>
+                    </tr>
+                    <tr>
+                        <td>10.15-11.50</td>
+                        <td colspan="2">Физико-химические основы электронных средств</td>
+                    </tr>
+                    <tr>
+                        <td>12.00-13.35</td>
+                        <td>Материаловедение и материалы электронных средств</td>
+                        <td>Метрология и технические измерения в производстве электронных средств</td>
+                    </tr>
+                    <tr>
+                        <td>13.50-15.25</td>
+                        <td>Материаловедение и материалы электронных средств</td>
+                        <td>Метрология и технические измерения в производстве электронных средств</td>
+                    </tr>
+                    <tr>
+                        <td>15.40-17.15</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>17.25-19.00</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>19.10-20.45</td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <p id="third_p">Алгоритм имеет название поиск в ширину, потому что на каждом этапе обхода рассматривает
+                    сначала все вершины,
+                    связанные с рассматриваемой, и лишь потом переходит к рассмотрению другой вершины.<br>
+                    Условно говоря, если представить множетсво открытых вершин как дерево, то оно сначала будет
+                    увеличиваться в <strong>ширину</strong>,
+                    а когда расширение закончится, будет увеличиваться в длину(глубину).</p>
+            </div>
+        </div>
+    </main>
+    <footer class="my-primary">
+        <div class="container">
+            <p class="footer-text">Footer</p>
+        </div>
+    </footer>
+</body>
+
+</html>

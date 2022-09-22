@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Лабораторная работа 3</title>
+    <meta charset="utf-8">
+    <script>
+        function getStruct() {
+            var body = document.body
+            var level = 0
+            recPrint(body, level)
+        }
+        function recPrint(node, level) {
+            for (var i = node; i != null; i = i.nextSibling) {
+                if (i.nodeType == 1) {
+                    print(i, level)
+                    console.log('node: ' + i.nodeName)
+                    console.log('level: ' + level)
+                    if (i.firstElementChild != null && i != document.getElementById('output')) {
+                        var child = i.firstElementChild
+                        recPrint(child, level + 1)
+                    }
+                }
+            }
+        }
+        function print(node, level) {
+            var output = document.getElementById('output')
+            var space = '&nbsp;'
+            output.insertAdjacentHTML('beforeend', space.repeat(level * 4) + node.nodeName + '<br>')
+        }
+    </script>
+</head>
+
+<body>
+    <nav>
+        Главная
+        <ul>
+            <li>Информация</li>
+            <li>Контакты</li>
+            <li>Прочее</li>
+        </ul>
+    </nav>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure repellat ea voluptates qui vero repudiandae
+            perferendis at dicta optio corrupti veniam suscipit libero, dolore ullam deserunt animi inventore eos
+            itaque.</p>
+        <p>Здесь могла быть ваша реклама</p>
+        <p>
+            Я лучше дома посижу <br>
+            И на диване полежу <br>
+            Зачем мне это пати? <br>
+            Ведь у меня так много других клевых занятий <br>
+        </p>
+    </div>
+    <button onclick="getStruct()">Получить содержимое</button>
+    <div id="output">
+        <p>Содержимое страницы:</p>
+    </div>
+</body>
+
+</html>

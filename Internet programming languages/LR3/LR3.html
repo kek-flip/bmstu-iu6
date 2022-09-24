@@ -15,8 +15,8 @@
             for (var i = node; i != null; i = i.nextSibling) {
                 if (i.nodeType == 1) {
                     print(i, level)
-                    console.log('node: ' + i.nodeName)
-                    console.log('level: ' + level)
+                    //console.log('node: ' + i.nodeName + '\n' + 'level: ' + level)
+                    console.log(`node: ${i.nodeName}\nlevel: ${level}`)
                     if (i.firstElementChild != null && i != document.getElementById('output')) {
                         var child = i.firstElementChild
                         recPrint(child, level + 1)

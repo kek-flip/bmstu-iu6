@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 
 <html lang="ru">
-    <head>
-        <title>Лабораторная работа 4</title>
-        <meta charset="utf-8">
-        <script src="./scripts/part1.js"></script>
-    </head>
 
-    <body>
-        <form action="">
-            <label for="good-name">Введите наименование:</label>
-            <input type="text" name="good-name" id="good-name">
-            <label for="good-price">Введите цену:</label>
-            <input type="number" name="good-price" id="good-price">
-        </form>
-    </body>
+<head>
+    <title>Лабораторная работа 4</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./scripts/part1.js"></script>
+    <link href="http://e-learning.bmstu.ru/iu6/pluginfile.php/7546/mod_folder/content/0/bootstrap.min.css"
+        rel="stylesheet">
+    <style>
+        main {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <main class="container">
+        <div class="row">
+            <div class="col-4">
+                <form id="good-form">
+                    <div class="form-group">
+                        <label for="good-name">Наименование товара</label>
+                        <input type="text" name="good-name" id="good-name" class="form-control"
+                            placeholder="Введите имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="good-price">Стоимость товара</label>
+                        <input type="number" name="good-price" id="good-price" class="form-control"
+                            placeholder="Введите цену">
+                    </div>
+                    <button onclick="addGoodToTable()" type="submit" class="btn btn-primary">Добавить</button>
+                </form>
+            </div>
+            <div class="col-8">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Наименование</th>
+                            <th scope="col">Стоимость</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+</body>
+
 </html>

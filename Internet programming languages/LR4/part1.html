@@ -21,19 +21,16 @@
     <main class="container">
         <div class="row">
             <div class="col-4">
-                <form id="good-form">
-                    <div class="form-group">
-                        <label for="good-name">Наименование товара</label>
-                        <input type="text" name="good-name" id="good-name" class="form-control"
-                            placeholder="Введите имя">
-                    </div>
-                    <div class="form-group">
-                        <label for="good-price">Стоимость товара</label>
-                        <input type="number" name="good-price" id="good-price" class="form-control"
-                            placeholder="Введите цену">
-                    </div>
-                    <button onclick="addGoodToTable()" type="submit" class="btn btn-primary">Добавить</button>
-                </form>
+                <div class="form-group">
+                    <label for="good-name">Наименование товара</label>
+                    <input type="text" name="goodName" id="good-name" class="form-control" placeholder="Введите имя">
+                </div>
+                <div class="form-group">
+                    <label for="good-price">Стоимость товара</label>
+                    <input type="number" name="goodPrice" id="good-price" class="form-control"
+                        placeholder="Введите цену">
+                </div>
+                <button onclick="addGoodToTable()" type="submit" class="btn btn-primary">Добавить</button>
             </div>
             <div class="col-8">
                 <table class="table">

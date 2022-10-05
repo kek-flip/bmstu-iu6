@@ -12,25 +12,94 @@
         rel="stylesheet">
     <style>
         main {
-            margin-top: 30px;
+            padding-top: 30px;
+            padding-bottom: 60px;
+        }
+
+        #goods-list-header {
+            margin-bottom: 20px;
+        }
+
+        #sum-button {
+            margin-top: 20px;
+        }
+        .price-col:hover {
+            background-color: aqua;
+        } 
+        .good-row:hover {
+            background-color: aqua;
         }
     </style>
 </head>
 
-<body>
+<body onload="configPage()">
     <main class="container">
         <div class="row">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Наименование</th>
+                        <th scope="col">Стоимость</th>
+                    </tr>
+                </thead>
+                <tbody id="goods-list">
+                    <tr>
+                        <td>1</td>
+                        <td>LED телевизор 32" ARTEL UA32H3200</td>
+                        <td>13999</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>LED телевизор 32" Toshiba 32V35KE</td>
+                        <td>17999</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Ultra HD (4K) LED телевизор 55" Haier 55 Smart TV MX</td>
+                        <td>41999</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Ultra HD (4K) LED телевизор 43" ARTEL UA43H3502</td>
+                        <td>26999</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Ultra HD (4K) LED телевизор 43" Philips 43PUS7406/60</td>
+                        <td>32999</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>LED телевизор 24" Novex NWX-24H121WSY</td>
+                        <td>9499</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Ultra HD (4K) LED телевизор 65" Haier 65 Smart TV MX</td>
+                        <td>59999</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>LED телевизор 43" Витязь 43LF0207</td>
+                        <td>13999</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="row">
             <div class="col-4">
+                <h2 id="order-list-header">Заказ</h2>
                 <div class="form-group">
                     <label for="good-name">Наименование товара</label>
-                    <input type="text" name="goodName" id="good-name" class="form-control" placeholder="Введите имя">
+                    <input type="text" name="goodName" id="order-good-name" class="form-control" placeholder="Введите имя">
                 </div>
                 <div class="form-group">
                     <label for="good-price">Стоимость товара</label>
-                    <input type="number" name="goodPrice" id="good-price" class="form-control"
+                    <input type="number" name="goodPrice" id="order-good-price" class="form-control"
                         placeholder="Введите цену">
                 </div>
-                <button onclick="addGoodToTable()" type="submit" class="btn btn-primary">Добавить</button>
+                <button onclick="getData()" type="submit" class="btn btn-primary">Добавить</button>
             </div>
             <div class="col-8">
                 <table class="table">
@@ -41,10 +110,20 @@
                             <th scope="col">Стоимость</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="order-list">
 
                     </tbody>
                 </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-6">
+                <p id="sum-text">Итого:</p>
+                <button onclick="caclPrice()" type="submit" class="btn btn-primary" id="sum-button">Рассчитать</button>
+            </div>
+            <div class="col-2">
+                <button onclick="clearOrder()" type="submit" class="btn btn-primary" id="sum-button">Очистить</button>
             </div>
         </div>
     </main>

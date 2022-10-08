@@ -32,6 +32,10 @@ function addGoodToOrder(name, price) {
 function getData() {
     var name = document.getElementById('order-good-name').value;
     var price = document.getElementById('order-good-price').value;
+    if (price == '' || name == '' || !priceValidator(price)) {
+        alert('Некорректный ввод');
+        return;
+    }
     addGoodToOrder(name, price);
 }
 
@@ -46,7 +50,6 @@ function caclPrice() {
 
 function configPage() {
     var tbody = document.getElementById('goods-list');
-    console.log(tbody.nodeName);
     for (var i of tbody.children) {
         i.classList.add('good-row');
         i.addEventListener('click', (event) => {
@@ -62,4 +65,11 @@ function clearOrder() {
         tbody.removeChild(tbody.firstChild);
     }
     document.getElementById('sum-text').textContent = 'Итого: ';
+    addGoodToOrder.counter = 1;
+}
+
+function priceValidator(price) {
+    var pattern = '[1-9][0-9]';
+    var res = price.match(pattern);
+    return (res != null && res.index == 0) ? true : false;
 }

@@ -61,4 +61,5 @@ function clearOrder() {
     while(tbody.firstChild) {
         tbody.removeChild(tbody.firstChild);
     }
+    document.getElementById('sum-text').textContent = 'Итого: ';
 }

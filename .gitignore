@@ -75,3 +75,4 @@ local*
 .DS_Store
 venv
 *.log
+*.pdf

@@ -69,7 +69,7 @@ function clearOrder() {
 }
 
 function priceValidator(price) {
-    var pattern = '[1-9][0-9]';
+    var pattern = '[1-9][0-9]?';
     var res = price.match(pattern);
     return (res != null && res.index == 0) ? true : false;
 }

@@ -2,12 +2,12 @@
 
 require_relative 'main'
 
-ans = calc(0.001)
+ans = Calculator.calc(0.001, 10)
 
-puts "Value with with an accuracy of 0.001: #{ans[0]}\n"
-puts "Iterations count #{ans[1]}"
+puts "Value with with an accuracy of 0.001: #{ans.last}\n"
+puts "Iterations count #{ans.length}"
 
-ans = calc(0.0001)
+ans = Calculator.calc(0.0001, 10)
 
-puts "Value with with an accuracy of 0.0001: #{ans[0]}\n"
-puts "Iterations count #{ans[1]}"
+puts "Value with with an accuracy of 0.0001: #{ans.last}\n"
+puts "Iterations count #{ans.length}"

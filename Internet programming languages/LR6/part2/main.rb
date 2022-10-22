@@ -1,28 +1,38 @@
 # frozen_string_literal: true
 
-def calc(eps)
-  sum = Enumerator.new do |y|
-    i_counter = 0
-    true_s = Math.log(2, Math::E)**2 / 2
+# def calc(eps, partition)
+#   true_s = Math.log(2, Math::E)**2 / 2
+#   partition /= 2
+#   d = 1.0 / partition
+#   Enumerator::Lazy.new(0..Float::INFINITY) do |yielder, _|
+#     s = 0
+#     partition *= 2
+#     d /= 2
+#     x = 1
+#     partition.times do
+#       s += Math.log(x, Math::E) / x
+#       x += d
+#     end
+#     s *= d
+#     yielder << s
+#   end.take_while { |s| (s - true_s).abs >= eps }.to_a
+# end
 
-    s = 0
-    n = 10
-    d = 1.0 / n
-    loop do
-      s = 0
-      n *= 2
+# Class to cacl integral
+class Calculator
+  TRUE_S = Math.log(2, Math::E)**2 / 2
+
+  def self.make_enumerator(partition)
+    partition /= 2
+    d = 1.0 / partition
+    Enumerator::Lazy.new(0..Float::INFINITY) do |yielder, _|
+      partition *= 2
       d /= 2
-      x = 1
-      n.times do
-        s += Math.log(x, Math::E) / x
-        x += d
-      end
-      s *= d
-      i_counter += 1
-      break if (s - true_s).abs < eps
+      yielder << (0..(partition - 1)).map { |i| 1 + i * d }.reduce(0) { |sum, el| sum + Math.log(el, Math::E) / el } * d
     end
-    y << s
-    y << i_counter
   end
-  sum.to_a
+
+  def self.calc(eps, partition)
+    make_enumerator(partition).take_while { |s| (s - TRUE_S).abs < eps }.to_a
+  end
 end

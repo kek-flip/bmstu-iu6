@@ -3,8 +3,8 @@
 require_relative 'main'
 
 puts 'Function x + cos(x) with limits [-1, 4]:'
-puts "Via lambda: #{trap_lambda(->(x) { x + Math.cos(x) }, -1, 4, 1000)}"
-puts "Via yield: #{trap_yield(-1, 4, 1000) { |x| x + Math.cos(x) }}"
+puts "Via lambda: #{trap_lambda(->(x) { x + Math.cos(x) }, -1, 4, 100_000)}"
+puts "Via yield: #{trap_yield(-1, 4, 100_000) { |x| x + Math.cos(x) }}"
 
 puts '==================='
 

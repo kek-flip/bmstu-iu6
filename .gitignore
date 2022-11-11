@@ -76,3 +76,4 @@ local*
 venv
 *.log
 *.pdf
+*.txt

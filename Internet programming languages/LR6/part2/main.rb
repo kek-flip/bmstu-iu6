@@ -1,11 +1,16 @@
 # frozen_string_literal: true
 
-# Class to cacl integral
+# Class to calc integral
 class Calculator
   TRUE_SUM = Math.log(2, Math::E)**2 / 2
 
   def self.calc(eps, partition)
-    make_enumerator(partition).take_while { |sum| (sum - TRUE_SUM).abs >= eps }.to_a
+    i_counter = 0
+    enum = make_enumerator(partition).drop_while do |sum| 
+      i_counter += 1
+      (sum - TRUE_SUM).abs >= eps
+    end
+    [enum.first, i_counter]
   end
 
   def self.make_enumerator(partition)

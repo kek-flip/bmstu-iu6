@@ -1,0 +1,18 @@
+<h1>LuckyNums#view</h1>
+<p>Find me in app/views/lucky_nums/view.html.erb</p>
+<p>Счастливые числа до <%= @n %> </p>
+<%= link_to 'Вернуться к вводу', root_path %>
+<br>
+<br>
+<table border = "1">
+    <thead>
+        <th>Число</th>
+        <th>Сумма слева и справа</th>
+    </thead>
+    <% @lucky_nums.each_key do |key| %>
+    <tr>
+        <td><%= key %></td>
+        <td><%= @lucky_nums[key] %></td>
+    </tr>
+    <% end %>
+</table>

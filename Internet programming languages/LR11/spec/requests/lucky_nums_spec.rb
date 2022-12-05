@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 require 'rails_helper'
 
-RSpec.describe "LuckyNums", type: :request do
+RSpec.describe 'LuckyNums', type: :request do
   describe 'GET /' do
     before { get root_path }
     it 'returns http success' do
@@ -16,7 +18,7 @@ RSpec.describe "LuckyNums", type: :request do
 
   describe 'GET /lucky_nums' do
     context 'when params are right' do
-      before {  get lucky_nums_path, params: { num: Faker::Number.number(digits: 4) } }
+      before { get lucky_nums_path, params: { num: Faker::Number.number(digits: 4) } }
       it 'returns http success' do
         expect(response).to have_http_status(:success)
       end

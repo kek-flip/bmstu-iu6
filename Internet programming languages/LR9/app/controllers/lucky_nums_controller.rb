@@ -1,10 +1,12 @@
+# frozen_string_literal: true
+
+# LuckyNumsController
 class LuckyNumsController < ApplicationController
   before_action :validate_num, only: :view
 
   def input; end
 
   def view
-    flash.clear
     @n = params[:num].to_i
     @lucky_nums = {}
     0.upto(@n) do |i|
@@ -15,9 +17,9 @@ class LuckyNumsController < ApplicationController
   end
 
   private
-  
+
   def validate_num
-    redirect_to(root_path, alert: "Поле не должно быть пустым!") if params[:num].empty? 
-    redirect_to(root_path, alert: "Число должно быть > 0") if params[:num].to_i < 0
+    redirect_to(root_path, alert: 'Поле не должно быть пустым!') if params[:num].empty?
+    redirect_to(root_path, alert: 'Число должно быть > 0') if params[:num].to_i.negative?
   end
 end

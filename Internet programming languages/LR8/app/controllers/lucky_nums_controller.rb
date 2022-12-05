@@ -17,8 +17,8 @@ class LuckyNumsController < ApplicationController
   end
 
   private
-  
+
   def validate_num
-    redirect_to(root_path, alert: "Ошибка! Число должно быть > 0") if params[:num].to_i < 0
+    redirect_to(root_path, alert: 'Ошибка! Число должно быть > 0') if params[:num].to_i.negative?
   end
 end

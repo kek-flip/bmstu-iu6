@@ -1,0 +1,17 @@
+<p>Счастливые числа до <%= @lucky_num.num %> </p>
+<%= link_to 'Вернуться к вводу', root_path %>
+<br>
+<br>
+<table border = "1">
+    <thead>
+        <th>Число</th>
+        <th>Сумма слева и справа</th>
+    </thead>
+    <% data = @lucky_num.lucky_nums.split(" ")%>
+    <% data.each do |pair| %>
+    <tr>
+        <td><%= pair.split(',')[0] %></td>
+        <td><%= pair.split(',')[1] %></td>
+    </tr>
+    <% end %>
+</table> 

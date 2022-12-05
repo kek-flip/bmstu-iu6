@@ -1,0 +1,12 @@
+<%= form_with url: lucky_nums_path, method: :get do |form| %>
+    <%= form.label :num, 'Введите верхнюю границу проверки чисел (> 0):' %>
+    <%= form.text_field :num %>
+    <br>
+    <br>
+    <%= form.submit 'Проверить' %>
+<% end %>
+
+<h2 id="error">
+    <%= flash[:alert] %>
+</h2>
+

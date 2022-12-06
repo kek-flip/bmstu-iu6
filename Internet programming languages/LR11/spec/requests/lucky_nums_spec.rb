@@ -25,7 +25,7 @@ RSpec.describe 'LuckyNums', type: :request do
       it 'renders result templates' do
         expect(response).to render_template(:view)
       end
-      it 'responds with turbo stream' do
+      it 'responds with html' do
         expect(response.content_type).to match(%r{text/html})
       end
     end

@@ -4,10 +4,10 @@
         <th>Число</th>
         <th>Сумма слева и справа</th>
     </thead>
-    <% @lucky_nums.each_key do |key| %>
+    <% @lucky_nums.each_pair do |key, value| %>
     <tr>
         <td><%= key %></td>
-        <td><%= @lucky_nums[key] %></td>
+        <td><%= value %></td>
     </tr>
     <% end %>
 </table>

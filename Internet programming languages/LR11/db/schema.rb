@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_05_144446) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_06_131834) do
   create_table "lucky_nums", force: :cascade do |t|
-    t.integer "num"
+    t.string "num"
     t.string "lucky_nums"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["num"], name: "index_lucky_nums_on_num"
   end
 
 end

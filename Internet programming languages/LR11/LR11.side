@@ -1,0 +1,149 @@
+{
+  "id": "7be47f1e-44e6-49d7-9a30-ec23335a478e",
+  "version": "2.0",
+  "name": "LR11",
+  "url": "http://127.0.0.1:3000",
+  "tests": [{
+    "id": "0b6b3e5f-512d-4d01-b227-65ec1e7c0c59",
+    "name": "enter num",
+    "commands": [{
+      "id": "446166b1-f66f-49d9-ab1e-3458f0d8e38d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4ade2c2c-6924-45cb-8401-a6ecf1686f60",
+      "comment": "",
+      "command": "click",
+      "target": "id=num",
+      "targets": [
+        ["id=num", "id"],
+        ["name=num", "name"],
+        ["css=#num", "css:finder"],
+        ["xpath=//input[@id='num']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6f409f16-5fb5-42c5-bff5-71ae1e0d2d99",
+      "comment": "",
+      "command": "type",
+      "target": "id=num",
+      "targets": [
+        ["id=num", "id"],
+        ["name=num", "name"],
+        ["css=#num", "css:finder"],
+        ["xpath=//input[@id='num']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "6565"
+    }, {
+      "id": "c1fd3e88-3ee8-45a9-85b7-1a7f17504964",
+      "comment": "",
+      "command": "click",
+      "target": "name=commit",
+      "targets": [
+        ["name=commit", "name"],
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@name='commit']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8604725d-e0a8-47c0-88a9-f3df6c3dc214",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "id=lucky-nums-p",
+      "targets": [],
+      "value": "30000"
+    }, {
+      "id": "edbf250c-3418-403a-ad70-7bc323f03c19",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=lucky-nums-p",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "717f4be3-376c-4403-835b-a6a2af2a7053",
+    "name": "enter negative num",
+    "commands": [{
+      "id": "bc3d50b1-07c2-4ccc-8367-b1d422248202",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1ba81a90-2cbb-4b55-80d4-eea3fd5759f9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1060x808",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "70c0fc2a-2f87-422a-b199-f9b3ccee5c0b",
+      "comment": "",
+      "command": "click",
+      "target": "id=num",
+      "targets": [
+        ["id=num", "id"],
+        ["name=num", "name"],
+        ["css=#num", "css:finder"],
+        ["xpath=//input[@id='num']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0833c5f0-c31d-466d-9b40-2169f50d3385",
+      "comment": "",
+      "command": "type",
+      "target": "id=num",
+      "targets": [
+        ["id=num", "id"],
+        ["name=num", "name"],
+        ["css=#num", "css:finder"],
+        ["xpath=//input[@id='num']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "-12"
+    }, {
+      "id": "89fff260-bfd6-4cf3-86ca-0899fe8c289a",
+      "comment": "",
+      "command": "click",
+      "target": "name=commit",
+      "targets": [
+        ["name=commit", "name"],
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@name='commit']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7e5ad21b-488e-4e2e-bc43-7b77d980ad2d",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=error",
+      "targets": [
+        ["id=error", "id"],
+        ["css=#error", "css:finder"],
+        ["xpath=//h2[@id='error']", "xpath:attributes"],
+        ["xpath=//h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Num должно быть целым положительным числом')]", "xpath:innerText"]
+      ],
+      "value": " Num должно быть целым положительным числом "
+    }]
+  }],
+  "suites": [{
+    "id": "67296bb2-ec22-4bee-b1ff-489052e330b3",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://127.0.0.1:3000/"],
+  "plugins": []
+}

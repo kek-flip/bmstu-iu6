@@ -1,12 +1,12 @@
-<h1>LuckyNums#input</h1>
-<p>Find me in app/views/lucky_nums/input.html.erb</p>
-
+<% flash.each do |_, msg| %>
+    <h1><%= msg %></h1>
+<% end %>
 <%= form_with url: lucky_nums_path, method: :get do |form| %>
     <%= form.label :num, 'Введите верхнюю границу проверки чисел (> 0):' %>
     <%= form.text_field :num %>
     <br>
     <br>
-    <%= form.radio_button :side, 'server' %>
+    <input type="radio" id="side" name="side" value="server" checked/>
     <%= form.label :side, 'Выполнить преобразование на сервере' %>
     <br>
     <%= form.radio_button :side, 'client' %>

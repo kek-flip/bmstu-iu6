@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects type="array">
+<object>
+<num type="integer">0</num>
+<sum type="integer">0</sum>
+</object>
+<object>
+<num type="integer">1001</num>
+<sum type="integer">1</sum>
+</object>
+<object>
+<num type="integer">1010</num>
+<sum type="integer">1</sum>
+</object>
+<object>
+<num type="integer">1100</num>
+<sum type="integer">1</sum>
+</object>
+<object>
+<num type="integer">2002</num>
+<sum type="integer">2</sum>
+</object>
+<object>
+<num type="integer">2011</num>
+<sum type="integer">2</sum>
+</object>
+<object>
+<num type="integer">2020</num>
+<sum type="integer">2</sum>
+</object>
+<object>
+<num type="integer">2101</num>
+<sum type="integer">2</sum>
+</object>
+<object>
+<num type="integer">2110</num>
+<sum type="integer">2</sum>
+</object>
+<object>
+<num type="integer">2200</num>
+<sum type="integer">2</sum>
+</object>
+<object>
+<num type="integer">3003</num>
+<sum type="integer">3</sum>
+</object>
+<object>
+<num type="integer">3012</num>
+<sum type="integer">3</sum>
+</object>
+<object>
+<num type="integer">3021</num>
+<sum type="integer">3</sum>
+</object>
+<object>
+<num type="integer">3030</num>
+<sum type="integer">3</sum>
+</object>
+<object>
+<num type="integer">3102</num>
+<sum type="integer">3</sum>
+</object>
+<object>
+<num type="integer">3111</num>
+<sum type="integer">3</sum>
+</object>
+<object>
+<num type="integer">3120</num>
+<sum type="integer">3</sum>
+</object>
+<object>
+<num type="integer">3201</num>
+<sum type="integer">3</sum>
+</object>
+<object>
+<num type="integer">3210</num>
+<sum type="integer">3</sum>
+</object>
+<object>
+<num type="integer">3300</num>
+<sum type="integer">3</sum>
+</object>
+<object>
+<num type="integer">4004</num>
+<sum type="integer">4</sum>
+</object>
+<object>
+<num type="integer">4013</num>
+<sum type="integer">4</sum>
+</object>
+<object>
+<num type="integer">4022</num>
+<sum type="integer">4</sum>
+</object>
+<object>
+<num type="integer">4031</num>
+<sum type="integer">4</sum>
+</object>
+<object>
+<num type="integer">4040</num>
+<sum type="integer">4</sum>
+</object>
+<object>
+<num type="integer">4103</num>
+<sum type="integer">4</sum>
+</object>
+<object>
+<num type="integer">4112</num>
+<sum type="integer">4</sum>
+</object>
+<object>
+<num type="integer">4121</num>
+<sum type="integer">4</sum>
+</object>
+<object>
+<num type="integer">4130</num>
+<sum type="integer">4</sum>
+</object>
+<object>
+<num type="integer">4202</num>
+<sum type="integer">4</sum>
+</object>
+<object>
+<num type="integer">4211</num>
+<sum type="integer">4</sum>
+</object>
+<object>
+<num type="integer">4220</num>
+<sum type="integer">4</sum>
+</object>
+<object>
+<num type="integer">4301</num>
+<sum type="integer">4</sum>
+</object>
+<object>
+<num type="integer">4310</num>
+<sum type="integer">4</sum>
+</object>
+<object>
+<num type="integer">4400</num>
+<sum type="integer">4</sum>
+</object>
+<object>
+<num type="integer">5005</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5014</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5023</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5032</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5041</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5050</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5104</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5113</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5122</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5131</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5140</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5203</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5212</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5221</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5230</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5302</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5311</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5320</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5401</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5410</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">5500</num>
+<sum type="integer">5</sum>
+</object>
+<object>
+<num type="integer">6006</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6015</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6024</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6033</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6042</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6051</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6060</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6105</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6114</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6123</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6132</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6141</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6150</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6204</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6213</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6222</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6231</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6240</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6303</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6312</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6321</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6330</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6402</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6411</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6420</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6501</num>
+<sum type="integer">6</sum>
+</object>
+<object>
+<num type="integer">6510</num>
+<sum type="integer">6</sum>
+</object>
+</objects>

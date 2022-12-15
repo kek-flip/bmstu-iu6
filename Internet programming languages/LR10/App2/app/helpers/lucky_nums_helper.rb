@@ -1,0 +1,2 @@
+module LuckyNumsHelper
+end

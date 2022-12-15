@@ -36,7 +36,7 @@ RSpec.describe 'LuckyNums', type: :request do
         expect(response).to have_http_status(302)
       end
       it 'returns 302 http when num <= 0' do
-        get lucky_nums_path, params: { num: Faker::Number.within(range: -9999..0) }, xhr: true
+        get lucky_nums_path, params: { num: Faker::Number.within(range: -9999..0) }
         expect(response).to have_http_status(302)
       end
       it 'responds with html' do

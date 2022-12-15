@@ -77,13 +77,6 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "1ba81a90-2cbb-4b55-80d4-eea3fd5759f9",
-      "comment": "",
-      "command": "setWindowSize",
-      "target": "1060x808",
-      "targets": [],
-      "value": ""
-    }, {
       "id": "70c0fc2a-2f87-422a-b199-f9b3ccee5c0b",
       "comment": "",
       "command": "click",
@@ -134,6 +127,92 @@
         ["xpath=//h2[contains(.,'Num должно быть целым положительным числом')]", "xpath:innerText"]
       ],
       "value": " Num должно быть целым положительным числом "
+    }]
+  }, {
+    "id": "77af8642-bade-4d1d-a670-380ee883ad1b",
+    "name": "enter float num",
+    "commands": [{
+      "id": "ce9fe305-e389-40ca-8309-b665011dd6ff",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "370dbf80-6f93-47a5-91b4-71353962e903",
+      "comment": "",
+      "command": "click",
+      "target": "id=num",
+      "targets": [
+        ["id=num", "id"],
+        ["name=num", "name"],
+        ["css=#num", "css:finder"],
+        ["xpath=//input[@id='num']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "340b3246-df9e-4185-8f7e-85a72780b5c9",
+      "comment": "",
+      "command": "type",
+      "target": "id=num",
+      "targets": [
+        ["id=num", "id"],
+        ["name=num", "name"],
+        ["css=#num", "css:finder"],
+        ["xpath=//input[@id='num']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "12.6"
+    }, {
+      "id": "1c51dd54-c060-4c6f-95b5-e93b3d47fec2",
+      "comment": "",
+      "command": "click",
+      "target": "name=commit",
+      "targets": [
+        ["name=commit", "name"],
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@name='commit']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6b88b325-65d7-40dd-9134-c2f6fd2e5716",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=error",
+      "targets": [],
+      "value": "Num должно быть целым положительным числом"
+    }]
+  }, {
+    "id": "9780f199-c494-43af-9c70-9273470a8108",
+    "name": "enter empty",
+    "commands": [{
+      "id": "534d31fe-93cd-4df8-9336-0310cf760526",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "711d7b14-b2e7-463d-82a4-865bcc345071",
+      "comment": "",
+      "command": "click",
+      "target": "name=commit",
+      "targets": [
+        ["name=commit", "name"],
+        ["css=input:nth-child(5)", "css:finder"],
+        ["xpath=//input[@name='commit']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc49e330-9b7a-4fe9-8b3b-43440e8b5fed",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=error",
+      "targets": [],
+      "value": "Num не может быть пустым"
     }]
   }],
   "suites": [{

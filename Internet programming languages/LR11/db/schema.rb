@@ -16,7 +16,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_06_131834) do
     t.string "lucky_nums"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["num"], name: "index_lucky_nums_on_num"
+    t.index ["num"], name: "index_lucky_nums_on_num", unique: true
   end
 
 end

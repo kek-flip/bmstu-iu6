@@ -11,5 +11,14 @@ require 'rails_helper'
 #   end
 # end
 RSpec.describe XmlHelper, type: :helper do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe 'calc_sum' do
+    it 'calc num of zeros' do
+      num = '0000'
+      expect(calc_sum(num, 0, 4)).to eq(0)
+    end
+    it 'calc sum of special digits in num' do
+      num = '12345'
+      expect(calc_sum(num, 0, 2)).to eq(3)
+    end
+  end
 end

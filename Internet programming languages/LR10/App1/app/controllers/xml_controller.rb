@@ -10,7 +10,7 @@ class XmlController < ApplicationController
             else
               @error
             end
-    
+
     respond_to do |format|
       format.xml { render xml: @data.to_xml }
       format.rss { render xml: @data.to_xml }
@@ -22,6 +22,6 @@ class XmlController < ApplicationController
   def parse_and_validate
     @num = params[:num]
     @error = { message: 'Параметр num не может отсутствовать' } if @num.nil?
-    @error = { message: 'Переданное число должно быть целым и положительным ' } if @num !~ /\A[1-9][0-9]{0,}\z/
+    @error = { message: 'Переданное число должно быть целым и положительным' } if @num !~ /\A[1-9][0-9]{0,}\z/
   end
 end

@@ -1,0 +1,227 @@
+{
+  "id": "e1ad3e54-aa84-4e3d-9883-65f9b745e387",
+  "version": "2.0",
+  "name": "LR10",
+  "url": "http://127.0.0.1:3001",
+  "tests": [{
+    "id": "3600f6c3-8e6a-4360-a9b8-719d681fd600",
+    "name": "Enter num and server side",
+    "commands": [{
+      "id": "ea0c50d7-69c5-4793-ba1f-8b3965dd774d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "90c656c8-36b9-4efe-ad1a-5804f4801793",
+      "comment": "",
+      "command": "click",
+      "target": "id=num",
+      "targets": [
+        ["id=num", "id"],
+        ["name=num", "name"],
+        ["css=#num", "css:finder"],
+        ["xpath=//input[@id='num']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a03a4ea7-932c-4ad2-8292-1b5c29650dcb",
+      "comment": "",
+      "command": "type",
+      "target": "id=num",
+      "targets": [
+        ["id=num", "id"],
+        ["name=num", "name"],
+        ["css=#num", "css:finder"],
+        ["xpath=//input[@id='num']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "6565"
+    }, {
+      "id": "5393e9ab-4860-49d1-9ea3-a6b67e53f4c1",
+      "comment": "",
+      "command": "click",
+      "target": "name=commit",
+      "targets": [
+        ["name=commit", "name"],
+        ["css=input:nth-child(12)", "css:finder"],
+        ["xpath=//input[@name='commit']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad141e82-9882-4ec6-b961-7fcf15a96d5e",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=lucky-nums-table",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "f1d6cc20-e6d5-43b4-a4ac-972cb5891167",
+    "name": "Enter num and client side",
+    "commands": [{
+      "id": "556bb7db-3cc9-4f45-9059-7970deba7d8a",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d858b1ea-cc6a-4811-82eb-eeba6a5014a7",
+      "comment": "",
+      "command": "click",
+      "target": "id=num",
+      "targets": [
+        ["id=num", "id"],
+        ["name=num", "name"],
+        ["css=#num", "css:finder"],
+        ["xpath=//input[@id='num']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f940d35f-17df-4b12-8d98-7c1795a157d9",
+      "comment": "",
+      "command": "type",
+      "target": "id=num",
+      "targets": [
+        ["id=num", "id"],
+        ["name=num", "name"],
+        ["css=#num", "css:finder"],
+        ["xpath=//input[@id='num']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "6565"
+    }, {
+      "id": "025d339c-4543-4498-9b6e-870c0270a54e",
+      "comment": "",
+      "command": "click",
+      "target": "id=side_client",
+      "targets": [
+        ["id=side_client", "id"],
+        ["css=#side_client", "css:finder"],
+        ["xpath=//input[@id='side_client']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ca575863-2f1e-4db2-800e-8d94ef66cc43",
+      "comment": "",
+      "command": "click",
+      "target": "name=commit",
+      "targets": [
+        ["name=commit", "name"],
+        ["css=input:nth-child(12)", "css:finder"],
+        ["xpath=//input[@name='commit']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f7c07fe3-d0cd-4489-843d-ebc67a511d89",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=lucky-nums-table",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "41a59f2e-7cf5-4980-94a7-c7951d7cd790",
+    "name": "Enter negative num",
+    "commands": [{
+      "id": "bc6af9c2-7677-46d3-b7a3-43bb79231787",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f13f8830-ef11-4543-97da-f0300e070e71",
+      "comment": "",
+      "command": "click",
+      "target": "id=num",
+      "targets": [
+        ["id=num", "id"],
+        ["name=num", "name"],
+        ["css=#num", "css:finder"],
+        ["xpath=//input[@id='num']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c3c2e202-21f5-47ec-aff8-b48fd669e2cc",
+      "comment": "",
+      "command": "type",
+      "target": "id=num",
+      "targets": [
+        ["id=num", "id"],
+        ["name=num", "name"],
+        ["css=#num", "css:finder"],
+        ["xpath=//input[@id='num']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "-55"
+    }, {
+      "id": "015f3e2f-6660-4139-b320-bd3339bf6d8c",
+      "comment": "",
+      "command": "click",
+      "target": "name=commit",
+      "targets": [
+        ["name=commit", "name"],
+        ["css=input:nth-child(12)", "css:finder"],
+        ["xpath=//input[@name='commit']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7ce62ffc-1963-4ddd-b744-5f3bf72d7b8b",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=error",
+      "targets": [],
+      "value": "Переданное число должно быть целым и положительным"
+    }]
+  }, {
+    "id": "5012ce46-1e94-47cb-8594-c440c396431f",
+    "name": "Enter empty",
+    "commands": [{
+      "id": "887c00d1-d663-4d4f-adbf-c12c61204dc6",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3983a4ec-e6e4-46de-8f96-a0b0d0fa4b70",
+      "comment": "",
+      "command": "click",
+      "target": "name=commit",
+      "targets": [
+        ["name=commit", "name"],
+        ["css=input:nth-child(12)", "css:finder"],
+        ["xpath=//input[@name='commit']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "35a8b222-f212-4efe-8fe4-6c0aa9eeb52d",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "id=error",
+      "targets": [],
+      "value": "Переданное число должно быть целым и положительным"
+    }]
+  }],
+  "suites": [{
+    "id": "8481c085-d9fa-40ff-a9a5-2572a696749f",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["3600f6c3-8e6a-4360-a9b8-719d681fd600"]
+  }],
+  "urls": ["http://127.0.0.1:3001/"],
+  "plugins": []
+}

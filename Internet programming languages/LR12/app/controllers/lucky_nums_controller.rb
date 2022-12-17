@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# LuckyNumsController
 class LuckyNumsController < ApplicationController
   before_action :parse_and_validate, only: :view
 
@@ -19,6 +22,9 @@ class LuckyNumsController < ApplicationController
 
   def parse_and_validate
     @num = params[:num]
-    redirect_to(lucky_nums_input_path, alert: 'Переданное число должно быть целым и положительным') if @num !~ /\A[1-9][0-9]{0,}\z/
+    return unless @num !~ /\A[1-9][0-9]{0,}\z/
+
+    redirect_to(lucky_nums_input_path,
+                alert: 'Переданное число должно быть целым и положительным')
   end
 end

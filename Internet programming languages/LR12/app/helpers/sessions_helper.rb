@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module SessionsHelper
   def sign_in(user)
     cookies.signed[:user_id] = { value: user.id, expires: 7.days }

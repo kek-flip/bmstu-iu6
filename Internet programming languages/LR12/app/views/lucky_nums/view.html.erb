@@ -1,0 +1,15 @@
+<%= link_to 'Вернуться к вводу', root_path %>
+<br>
+<br>
+<table border = "1">
+    <thead>
+        <th>Число</th>
+        <th>Сумма слева и справа</th>
+    </thead>
+    <% @lucky_nums.each_pair do |num, sum| %>
+    <tr>
+        <td><%= num %></td>
+        <td><%= sum %></td>
+    </tr>
+    <% end %>
+</table>

@@ -1,0 +1,21 @@
+<% flash.each do |_, msg| %>
+    <h1 id="message"><%= msg %></h1>
+<% end %>
+
+<h2>Авторизация</h2>
+<br>
+<br>
+<%= form_with url: sessions_create_path, method: :post, local: true do |form| %>
+    <%= form.label :login, 'Логин: ' %>
+    <%= form.text_field :login, require: true %>
+    <br>
+    <br>
+    <%= form.label :num, 'Пароль: ' %>
+    <%= form.password_field :password, require: true %>
+    <br>
+    <br>
+    <%= form.submit id: 'submit-btn', value: 'Войти', require: true %>
+<% end %>
+<br>
+<br>
+<%= link_to 'Регистрация', new_user_path %>

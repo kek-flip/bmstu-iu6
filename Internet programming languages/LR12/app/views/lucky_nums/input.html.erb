@@ -1,0 +1,13 @@
+<% flash.each do |_, msg| %>
+    <h1 id="error"><%= msg %></h1>
+<% end %>
+<%= form_with url: view_path, method: :get do |form| %>
+    <%= form.label :num, 'Введите верхнюю границу проверки чисел (> 0):' %>
+    <%= form.text_field :num %>
+    <br>
+    <br>
+    <%= form.submit 'Проверить' %>
+<% end %>
+<br>
+<br>
+<%= link_to 'Выйти', sessions_logout_path %>

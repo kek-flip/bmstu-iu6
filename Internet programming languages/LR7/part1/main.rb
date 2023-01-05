@@ -15,7 +15,7 @@ end
 def write_data_to_file(file_to_write)
   File.open('F.txt', 'r') do |file|
     while line = file.gets
-      line.split(' ').each { |word| file_to_write.puts word if word.include?('a') }
+      line.split.each { |word| file_to_write.puts word if word.include?('a') }
     end
   end.nil?
 end

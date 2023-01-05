@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Helper for LuckyNums
 module LuckyNumsHelper
   def calc_sum(num, left, right)
     sum = 0

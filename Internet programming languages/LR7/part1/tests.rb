@@ -28,7 +28,7 @@ RSpec.describe 'write_data_to_file()' do
     words_F = []
     File.readlines('F.txt').each do |line|
       line.chomp!
-      words_F.concat(line.split(' '))
+      words_F.concat(line.split)
     end
     expect((words_H - words_F)).to be_empty
   end

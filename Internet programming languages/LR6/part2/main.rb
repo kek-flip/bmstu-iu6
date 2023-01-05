@@ -6,7 +6,7 @@ class Calculator
 
   def self.calc(eps, partition)
     i_counter = 0
-    enum = make_enumerator(partition).drop_while do |sum| 
+    enum = make_enumerator(partition).drop_while do |sum|
       i_counter += 1
       (sum - TRUE_SUM).abs >= eps
     end

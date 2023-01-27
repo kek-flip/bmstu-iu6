@@ -78,6 +78,7 @@ venv
 *.pdf
 *.txt
 *.docx
+*.doc
 *.tmp
 *.7z
 

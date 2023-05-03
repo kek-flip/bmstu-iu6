@@ -3,6 +3,7 @@
 
 # Compiled Object files
 *.o
+*.lst
 *.slo
 *.ko
 *.lo
@@ -81,6 +82,7 @@ venv
 *.doc
 *.tmp
 *.7z
+*.vsdx
 
 #Rails projects
 
